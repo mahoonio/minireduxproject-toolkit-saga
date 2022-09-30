@@ -1,5 +1,6 @@
 const redux = require('redux');
 const createStore = redux.createStore;
+const combineReducers = redux.combineReducers;
 
 const log = console.log; // for logging easier
 
@@ -40,6 +41,11 @@ const iceCreamReducer = (state = initialIceCreamState, action) => {
       return state;
   }
 };
+
+const reducer = combineReducers({
+  cakes: cakeReducer,
+  iceCreams: iceCreamReducer,
+});
 
 const store = createStore(reducer);
 // log(store);
