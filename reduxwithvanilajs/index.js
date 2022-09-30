@@ -28,6 +28,13 @@ const store = createStore(reducer);
 // log(store);
 log('initial state : ', store.getState());
 
-store.subscribe(() => log('updated state : ', store.getState())); // subscribe gets a function that
+const unsubscribe = store.subscribe(() =>
+  log('updated state : ', store.getState())
+); // subscribe gets a function that
 // and execute it whenever a state gets changed
 store.dispatch(buyCake());
+
+store.dispatch(buyCake());
+store.dispatch(buyCake());
+store.dispatch(buyCake());
+unsubscribe();
