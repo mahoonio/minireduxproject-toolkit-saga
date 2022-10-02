@@ -5,6 +5,7 @@ const reduxLogger = require('redux-logger');
 const applyMiddleWare = redux.applyMiddleware; //action ====> reducer hade fasele action ta residan be reducer.
 const log = console.log; // for logging easier
 
+// actions
 const BUY_CAKE = 'BUY_CAKE';
 
 const BUY_ICECREAM = 'BUY_ICECREAM';
