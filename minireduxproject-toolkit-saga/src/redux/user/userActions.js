@@ -20,7 +20,7 @@ const fetchUsers = () => {
   return function (dispatch) {
     dispatch(fetchUsersRequest());
     axios
-      .get('https://jsonplaceholder.typicode.com/usersgbgb')
+      .get('https://jsonplaceholder.typicode.com/users')
       .then((res) => {
         const users = res.data;
         dispatch(fetchUsersSuccess(users));
